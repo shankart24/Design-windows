@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+}
+
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.5fr;
+    grid-template-rows: 80px auto;
+    grid-template-areas: "navbar navbar navbar"
+        "image content contact"
+        "image content contact"
+        "image content contact"
+}
+
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brand h2 {
+    color: black;
+    font-family: 'Lato', sans-serif;
+}
+
+.list {
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    z-index: 1;
+}
+
+.list li {
+    display: inline;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.list li:nth-child(1) {
+    font-weight: bolder;
+    border-bottom: 2px solid white;
+}
+
+.image {
+    grid-area: image;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.image img {
+    height: 95%;
+    width: 130%;
+    position: absolute;
+    left: 80px;
+    border-radius: 3px;
+    z-index: 1;
+    box-shadow: 20px 10px rgba(1, 1, 1, 0.1);
+}
+
+.content {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 1;
+    background-color: #004a67;
+}
+
+.container {
+    height: 100%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: lightslategray;
+}
+
+.container h1 {
+    font-size: 6rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.container h4 {
+    font-size: 1.1rem;
+    margin: 20% 0 10% 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: lightslategray;
+}
+
+.container button {
+    border: 3px solid whitesmoke;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.container button h5 {
+    font-size: 0.8rem;
+    padding: 10px 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #004a67;
+}
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-row-start: 1;
+    background-color: #004a67;
+}
+
+.contact>div {
+    margin: 20px 0 20px 0;
+    background-color: rgba(4, 87, 120, 0.7);
+    border-radius: 50%;
+}
+
+.contact img {
+    padding: 10px 10px;
+}
